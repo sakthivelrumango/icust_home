@@ -1,0 +1,84 @@
+<div [perfectScrollbar]>
+  <section class="home-section section-intro text-center">
+    <div class="container">
+      <img src="assets/images/transparent-v2.png" alt="rumango" height="50">
+    </div>
+  </section>
+  <div class="container">
+  <section class="home-section section-demos">
+  
+    <mat-tab-group mat-align-tabs="center" animationDuration="1000ms">
+      <mat-tab label="iCust Testing">
+        <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="16px" class="my-16">
+          <div class="demo-box-wrap" fxFlex="50" fxFlex.sm="50" fxFlex.gt-sm="33.33" *ngFor="let v of versions"> 
+            <div class="text-center demo-box" [matTooltip]="v.name" matTooltipPosition="above">
+              <div (click)="goToDashboard(v)" class="p-0 screenshot">
+                <img [src]="v.photo">
+              </div>
+              <div class="caption">
+                <h3>{{v.name}}</h3>
+                <h6>Version :{{ v.version }}</h6>
+                <p>Build : {{ v.build }}</p>
+                <button mat-raised-button color="primary" (click)="goToDashboard(v)">OPEN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Median Testing">
+        <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="16px" class="my-16">
+          <div class="demo-box-wrap" fxFlex="30" fxFlex.sm="30" fxFlex.gt-sm="30" *ngFor="let v of median_versions"> 
+            <div class="text-center demo-box" [matTooltip]="v.name" matTooltipPosition="above">
+              <div (click)="goToDashboard(v)" class="p-0 screenshot">
+                <img [src]="v.photo">
+              </div>
+              <div class="caption">
+                <h3>{{v.name}}</h3>
+                <h6>Version :{{ v.version }}</h6>
+                <p>Build : {{ v.build }}</p>
+                <button mat-raised-button color="primary" (click)="goToDashboard(v)">OPEN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+       <mat-tab label="iCust Demo">
+        <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="16px" class="my-16">
+          <div class="demo-box-wrap" fxFlex="50" fxFlex.sm="50" fxFlex.gt-sm="33.33" *ngFor="let v of icustDemo_versions"> 
+            <div class="text-center demo-box" [matTooltip]="v.name" matTooltipPosition="above">
+              <div (click)="goToDashboard(v)" class="p-0 screenshot">
+                <img [src]="v.photo">
+              </div>
+              <div class="caption">
+                <h3>{{v.name}}</h3>
+                <h6>Version :{{ v.version }}</h6>
+                <p>Build : {{ v.build }}</p>
+                <button mat-raised-button color="primary" (click)="goToDashboard(v)">OPEN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Median Demo">
+        <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="16px" class="my-16">
+          <div class="demo-box-wrap" fxFlex="50" fxFlex.sm="50" fxFlex.gt-sm="33.33" *ngFor="let v of median_demo_versions"> 
+            <div class="text-center demo-box" [matTooltip]="v.name" matTooltipPosition="above">
+              <div (click)="goToDashboard(v)" class="p-0 screenshot">
+                <img [src]="v.photo">
+              </div>
+              <div class="caption">
+                <h3>{{v.name}}</h3>
+                <h6>Version :{{ v.version }}</h6>
+                <p>Build : {{ v.build }}</p>
+                <button mat-raised-button color="primary" (click)="goToDashboard(v)">OPEN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+   
+  </section>
+</div>
+</div>

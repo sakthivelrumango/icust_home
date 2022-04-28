@@ -1,0 +1,44 @@
+
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: blue !important;
+  }
+  
+  ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: blue!important;   /*inner circle color change*/
+  }
+  
+  ::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+   border-color:blue!important; /*outer ring color change*/
+  }
+
+
+
+/* You can add global styles to this file, and also import other style files */
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/Montserrat/Montserrat-Regular.ttf');
+    src: url('./assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
+  }  
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+    src: url('./assets/fonts/Roboto/Roboto-Bold.ttf');
+  }  
+  @font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/static/Manrope-Light.ttf');
+    src: url('./assets/fonts/static/Manrope-Medium.ttf');
+  }  
+  body{
+    font-family: 'Open Sans', sans-serif;
+  } 
